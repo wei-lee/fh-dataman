@@ -1,0 +1,43 @@
+{
+  "name": "fh-dataman",
+  "version": "0.0.1",
+  "description": "A new backend for the databrowser",
+  "main": "lib/app.js",
+  "scripts": {
+    "install": "scripts/install.sh",
+    "postinstall": "scripts/postinstall.sh",
+    "start": "node lib/app.js config/dev.json --master-only"
+  },
+  "bin": {
+    "fh-dataman" : "./lib/app.js"
+  },
+  "author": "feedhenry",
+  "repository": "feedhenry/fh-dataman",
+  "license": "MIT",
+  "engines": {
+    "node": "4.4"
+  },
+  "preferGlobal": true,
+  "dependencies": {
+    "body-parser": "1.15.2",
+    "compression": "1.6.2",
+    "cookie-parser": "1.4.3",
+    "express": "4.14.0",
+    "mongoose": "4.5.1",
+    "fh-config": "1.1.0",
+    "fh-cluster": "0.3.0",
+    "fh-logger": "0.5.1",
+    "cors": "2.8.1",
+    "express-bunyan-logger": "1.3.1",
+    "optimist": "0.6.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^6.0.0",
+    "grunt-fh-build": "^1.0.2",
+    "istanbul": "0.4.3",
+    "load-grunt-tasks": "^3.5.2",
+    "mocha": "^2.3.3"
+  }
+}
