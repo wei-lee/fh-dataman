@@ -9,13 +9,26 @@
     "start": "node lib/app.js config/dev.json --master-only"
   },
   "bin": {
-    "fh-dataman" : "./lib/app.js"
+    "fh-dataman": "./lib/app.js"
   },
   "author": "feedhenry",
   "repository": "feedhenry/fh-dataman",
   "license": "MIT",
   "engines": {
     "node": "4.4"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.js"
+    ],
+    "exclude": [
+      "src/**/*_test.js"
+    ],
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false
   },
   "preferGlobal": true,
   "dependencies": {
@@ -32,12 +45,17 @@
     "optimist": "0.6.1"
   },
   "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-plugin-istanbul": "^3.0.0",
     "babel-preset-es2015": "^6.18.0",
+    "babel-register": "^6.18.0",
+    "cross-env": "^3.1.3",
     "grunt": "^1.0.1",
     "grunt-babel": "^6.0.0",
     "grunt-fh-build": "^1.0.2",
-    "istanbul": "0.4.3",
     "load-grunt-tasks": "^3.5.2",
-    "mocha": "^2.3.3"
+    "mocha": "^2.3.3",
+    "nyc": "^10.0.0",
+    "supertest": "^2.0.1"
   }
 }

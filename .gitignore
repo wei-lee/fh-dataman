@@ -28,3 +28,4 @@ conf-docker.json
 *.swp
 lib/
 lib
+.nyc_output
