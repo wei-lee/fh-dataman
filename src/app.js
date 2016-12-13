@@ -16,7 +16,6 @@ import errorHandler from './endpoints/http/error.js';
 import {setLogger} from './logger';
 import validation from '../config/validation';
 
-//test PR
 var TITLE = "fh-dataman";
 process.env.component = TITLE;
 if (!process.env.conf_file) {
