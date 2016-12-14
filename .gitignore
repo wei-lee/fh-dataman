@@ -29,3 +29,4 @@ conf-docker.json
 lib/
 lib
 .nyc_output
+.vscode
